@@ -111,7 +111,7 @@ function buildCharts(sample) {
       marker: {
         color: otu_ids,
         size: sample_values,
-        colorscale: 'Earth'
+        colorscale: 'Portland'
       }
     }];
 
@@ -143,7 +143,13 @@ function buildCharts(sample) {
           { range: [4, 6], color: "yellow" },
           { range: [6, 8], color: "lightgreen" },
           { range: [8, 10], color: "green" }
-        ]},
+        ],      
+        threshold: {
+          line: { color: "darkgreen", width: 4 },
+          thickness: 10,
+          value: 10
+        }
+      },
     }];
     
     // 5. Create the layout for the gauge chart.
